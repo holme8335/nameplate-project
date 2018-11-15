@@ -1,0 +1,172 @@
+.mr-auto {
+  margin-right: auto !important; }
+
+.text-white {
+  color: white; }
+
+.text-success {
+  color: green; }
+
+.text-wrap {
+  word-wrap: break-word; }
+
+.mr-1 {
+  margin-right: .25rem; }
+
+.mr-2 {
+  margin-right: .5rem; }
+
+.mr-3 {
+  margin-right: 1rem; }
+
+.mr-4 {
+  margin-right: 1.5rem; }
+
+.mr-5 {
+  margin-right: 3rem; }
+
+.ml-5 {
+  margin-left: 3rem !important; }
+
+.ml-3 {
+  margin-left: 1rem !important; }
+
+.transparent {
+  background-color: transparent; }
+
+.w-100 {
+  width: 100%; }
+
+.justify-content-around {
+  display: flex;
+  justify-content: space-around; }
+
+.text-center {
+  text-align: center; }
+
+nav.navbar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  color: setColor(secondary, darker);
+  background-color: setColor(navbar); }
+  nav.navbar .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto; }
+    nav.navbar .navbar-collapse .navbar-nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      padding-left: 0;
+      margin-bottom: 0;
+      list-style: none;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      nav.navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+        display: block;
+        padding: .5rem 1rem;
+        color: white; }
+      nav.navbar .navbar-collapse .navbar-nav .nav-item a {
+        text-decoration: none;
+        background-color: transparent;
+        -webkit-text-decoration-skip: objects; }
+      nav.navbar .navbar-collapse .navbar-nav .nav-item.dropdown {
+        position: relative;
+        border-bottom: 3px solid transparent; }
+      nav.navbar .navbar-collapse .navbar-nav .nav-item.show {
+        border-bottom: 3px solid #44ade3; }
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  font-size: 0.8rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: setColor(navbar-back);
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: .25rem; }
+  .dropdown-menu.left {
+    left: 0; }
+  .dropdown-menu.right {
+    right: 0; }
+  .dropdown-menu.show {
+    display: block; }
+  .dropdown-menu .dropdown-item {
+    display: block;
+    padding: .1rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: white;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+    .dropdown-menu .dropdown-item .item-image-container {
+      width: 20px;
+      height: 20px;
+      margin-right: .9rem; }
+  .dropdown-menu .dropdown-divider {
+    height: 0;
+    margin: .1rem 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(233, 236, 239, 0.3); }
+
+input[type=text] {
+  background-color: #142534;
+  border: none;
+  padding: .5rem;
+  color: white; }
+  input[type=text]::placeholder {
+    color: #278bdc;
+    opacity: 1; }
+  input[type=text].border-less {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white; }
+  input[type=text].placeholder-grey::placeholder {
+    color: grey; }
