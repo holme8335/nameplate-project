@@ -1,20 +1,23 @@
-input[type=text] {
-    background-color: rgb(20, 37, 52);
-    border: none ;
-    padding: .5rem;
-    color: white;
+
+@import '../abstracts/mixins';
+
+.textinput {
+    @include backgroundColor(black);
+    @include border(none, none);
+    @include paddingMargin(.5rem, none);
+    @include textColor(whiteColor);
 
     &::placeholder {
-        color: rgb(39, 139, 220);
-        opacity: 1;
+        @include textColor(accent);
+        @include opacity(1);
     }
 
     &.border-less {
-        background-color: transparent;
-        border: none;
-        border-bottom: 2px solid white;
+        @include backgroundColor(transparent);
+        @include border(none, none);
+        @include borderBottom(2px solid white);
     }
     &.placeholder-grey::placeholder {
-        color: grey;
+        @include textColor(secondary);
     }
 }

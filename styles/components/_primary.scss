@@ -1,46 +1,52 @@
+@import '../abstracts/mixins';
+
 .mr-auto {
-    margin-right: auto!important;
+    @include marginrightimportant('auto');
 }
 .text-white {
-    color: white;
+    @include textColor('white');
 }
 .text-success {
-    color: green;
+    @include textColor('success');
 }
 .text-wrap {
-    word-wrap: break-word;
+    @include wordWrap(break-word);
 }
 .mr-1 {
-    margin-right: .25rem;
+    @include marginright('.25rem');
 }
 .mr-2 {
-    margin-right: .5rem;
+    @include marginright('.5rem');
 }
 .mr-3 {
-    margin-right: 1rem;
+    @include marginright('1rem');
 }
 .mr-4 {
-    margin-right: 1.5rem;
+    @include marginright('1.5rem');
 }
 .mr-5 {
-    margin-right: 3rem;
+    @include marginright('3rem');
 }
 .ml-5 {
-    margin-left: 3rem !important;
+    @include marginleftimportant('3rem');
 }
 .ml-3 {
-    margin-left: 1rem !important;
+    @include marginleftimportant('1rem');
 }
 .transparent {
-    background-color: transparent ;
+    @include backgroundColor(transparent);
 }
 .w-100 {
-    width: 100%;
+    @include widthHeight(100%, none);
 }
 .justify-content-around {
-    display: flex;
-    justify-content: space-around;
+    @include flexview();
+    @include justifyContent(space-around);
 }
 .text-center {
-    text-align: center;
+    @include textAlign(center);
+}
+
+.svg-icon path {
+    @include fill(setColor(redColor));
 }

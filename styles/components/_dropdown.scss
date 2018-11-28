@@ -1,57 +1,51 @@
+@import '../abstracts/mixins';
+
 .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 10rem;
-    padding: .5rem 0;
-    margin: .125rem 0 0;
-    font-size: 0.8rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: setColor(navbar-back);
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: .25rem;
+    @include position(absolute);
+    @include top(100%);
+    @include zIndex(1000);
+    @include display(none);
+    @include float(left);
+    @include minWidth(10rem);
+    @include paddingMargin(.5rem 0, .125rem 0 0);
+    @include fontsizeColor(medium, accent1);
+    @include textAlign(left);
+    @include listStyle(none);
+    @include backgroundColor(setColor(navbar-back));
+    @include backgroundClip(padding-box);
+    @include border(1px solid black, 0.25rem);
 
     &.left {
-        left: 0;
+        @include left(0);
     }
     &.right {
-        right: 0;
-    }
-
-    &.show {
-        display: block;
+        @include right(0);
     }
 
     .dropdown-item {
-        display: block;
-        padding: .1rem 1.5rem;
-        clear: both;
-        font-weight: 400;
-        color: white;
-        text-align: inherit;
-        white-space: nowrap;
-        background-color: transparent;
-        border: 0;
+        @include display(block);
+        @include paddingMargin(.1rem .5rem, none);
+        @include clear(both);
+        @include fontWeight(400);
+        @include textColor(whiteColor);
+        @include textAlign(inherit);
+        @include whiteSpace(nowrap);
+        @include backgroundColor(transparent);
+        @include border(0, none);
 
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        @include flexview();
+        @include flexDirection(row);
+        @include alignItems(center);
 
         .item-image-container {
-            width: 20px;
-            height: 20px;
-            margin-right: .9rem;
+            @include widthHeight(20px, 20px);
+            @include marginright(0.9rem);
         }
     }
     .dropdown-divider {
-        height: 0;
-        margin: .1rem 0;
-        overflow: hidden;
-        border-top: 1px solid rgba(233, 236, 239, 0.30);
+        @include widthHeight(auto, 0);
+        @include paddingMargin(none, .1rem 0);
+        @include overflow(hidden);
+        @include borderTop(1px solid setColor(accent2));
     }
 }
